@@ -5,6 +5,11 @@
    Vin             3.3V
    SDA             A4
    SDO             A5
+Reference: 
+  http://codeyoung.blogspot.in/2009/11/adxl345-accelerometer-breakout-board.html
+  http://morf.lv/modules.php?name=tutorials&lasit=31
+  http://www.analog.com/media/en/technical-documentation/data-sheets/ADXL345.pdf
+  
 */
 #include<Wire.h>
 
@@ -29,7 +34,7 @@ void setup(){
   writeTo(DEVICE, 0x2D, 0);
   writeTo(DEVICE, 0x2D, 16);
   writeTo(DEVICE, 0x2D, 8);
-  writeTo(DEVICE, 0x31, 11);
+  writeTo(DEVICE, 0x31, 11);  // 11 for 13 bit resolution and ±16 g
 }
 
 void loop(){
