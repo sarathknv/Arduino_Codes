@@ -1,4 +1,4 @@
-//Read value at a given register
+//Read value at a register
 
 void readFrom(int device, byte address, int num, byte buff[]) {
   Wire.beginTransmission(device); //start transmission to device 
