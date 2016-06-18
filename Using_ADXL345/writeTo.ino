@@ -1,5 +1,5 @@
 
-//Writing value to a given register
+//Writing value to a register
 
 void writeTo(int device, byte address, byte val) {
    Wire.beginTransmission(device); //start transmission to device 
