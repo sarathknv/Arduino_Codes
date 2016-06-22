@@ -1,6 +1,7 @@
 /*Using TMP36 Temperature sensor with AREF pin on arduino for more precision
  * Reference: https://learn.adafruit.com/tmp36-temperature-sensor/using-a-temp-sensor
  *            http://tronixstuff.com/2013/12/12/arduino-tutorials-chapter-22-aref-pin/
+ * Data-sheet(for connections): http://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf           
  */
 
  

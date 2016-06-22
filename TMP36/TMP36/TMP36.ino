@@ -1,5 +1,6 @@
 /*TMP36 Temperature sensor
  * Reference: https://learn.adafruit.com/tmp36-temperature-sensor/using-a-temp-sensor
+ * Data-sheet(for connections) - http://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf
  */
 int tempPin = 0;  //analog pin to be read from
 unsigned int rawReading; //from pin
