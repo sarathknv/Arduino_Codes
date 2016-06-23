@@ -18,6 +18,7 @@ void setup()
 
 void loop()
 {
+  delay(5000);
   setBrightness(0);
   for (i = 0; i < 8; i++) bitSet(leds, i);    //to change bits
   updateShiftRegister();
