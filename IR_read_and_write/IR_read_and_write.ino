@@ -1,4 +1,4 @@
-/*Incomplete*/
+/*https://learn.adafruit.com/using-an-infrared-library?view=all */
 #include <IRremote.h>
 
 int recv_pin = 11;
@@ -17,3 +17,4 @@ void loop(){
   }
 }
 
+//irsend.sendRaw(rawCodes, codeLen, 38);
