@@ -1,5 +1,5 @@
 /*I don't know why if I enter 3 characters in Serial monitor, it is always followed by space and a new line character.
-   This did not happen data sent over bluetooth.
+   This did not happen for data sent over bluetooth.
 */
 void getColorCode() {
 
