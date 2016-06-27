@@ -1,8 +1,0 @@
-Learn interrupts
-Get the tap detection working on ADXL345
-Check if it can detect continuous taps
-
-Also try with piezo transducer(maybe this requires significant tapping, I mean, put in more power)
-
-If the inbuit tap detection doesn't work, develop an algorithm, maybe you can try this first.
-
