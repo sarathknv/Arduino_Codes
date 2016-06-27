@@ -33,8 +33,8 @@ void setup() {
   writeTo(DEVICE, 0x2D, 0);
   writeTo(DEVICE, 0x2D, 16);
   writeTo(DEVICE, 0x2D, 8);
-  writeTo(DEVICE, 0x31, 10);  // 11 for 13 bit resolution and ±16 g
-  init(60, 45, -127);
+  writeTo(DEVICE, 0x31, 11);  // 11 for 13 bit resolution and ±16 g
+  //init(60, 45, -127);
 }
 
 void loop() {
@@ -44,8 +44,8 @@ void loop() {
   rawz = (((int)values[5]) << 8) | values[4];
 
   
-  /*Serial.print(rawx); Serial.print("    ");
-  Serial.print(rawy); Serial.print("    ");*/ Serial.print(rawz); Serial.println("    ");
+  Serial.print(rawx); Serial.print("    ");
+  Serial.print(rawy); Serial.print("    "); Serial.print(rawz); Serial.println("    ");
   
   a.x = rawx * 0.00390625;
   a.y = rawy * 0.00390625;
