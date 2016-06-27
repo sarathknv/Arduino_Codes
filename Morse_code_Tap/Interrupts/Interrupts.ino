@@ -16,6 +16,7 @@
 
   Detecting taps through interrupts INT1 - SINGLE (PIN 2)
                                     INT2 - DOUBLE (PIN 3)
+  (It worked when Single and Double Tap bits were set 1 and Watermark and Overrun bits to 0 )                                
 */
 
 #include<Wire.h>
@@ -24,7 +25,7 @@
 
 boolean singleTap = false;
 boolean doubleTap = false;
-byte data;                 //stores byte at INT_SOURCE (0x30)
+byte data;                 //stores byte read from INT_SOURCE (0x30)
 
 void tap1() {              //ISR0
   singleTap = true;
@@ -56,7 +57,7 @@ void setup() {
   writeTo(DEVICE, 0x22, 80);  //LATENT 1.25ms/LSB  0.1sec
   writeTo(DEVICE, 0x23, 240); //WINDOW 1.25ms/LSB  0.3sec
 
-  writeTo(DEVICE, 0x2F, 32);  //INT_MAP 00100000
+  writeTo(DEVICE, 0x2F, 32);  //INT_MAP 00100000    double to INT2
   writeTo(DEVICE, 0x2E, 96);  //INT_ENABLE 01100000
 
 }
@@ -66,7 +67,7 @@ void loop() {
   //Serial.println(data, BIN);
   if (singleTap)
   {
-    delay(400);             //wait for 400 ms to check for another tap
+    delay(50);             //wait for 400 ms to check for another tap (not required, added delay at the end)
     if (!doubleTap)
     {
       Serial.println("Single Tap");
@@ -78,6 +79,7 @@ void loop() {
     singleTap = false;
     doubleTap = false;
   }
+  delay(20);
 }
 
 
