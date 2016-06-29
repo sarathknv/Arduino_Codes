@@ -4,7 +4,7 @@
    GND             GND
    Vin             3.3V
    SDA             A4
-   SDO             A5
+   SCL             A5
   Reference:
   http://codeyoung.blogspot.in/2009/11/adxl345-accelerometer-breakout-board.html
   http://morf.lv/modules.php?name=tutorials&lasit=31

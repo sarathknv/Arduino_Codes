@@ -4,7 +4,7 @@
    GND             GND
    Vin             3.3V
    SDA             A4
-   SDO             A5
+   SCL             A5
    If the accelorometer is not Adafruit's then connect CS to 3.3 V
   Reference:
   http://codeyoung.blogspot.in/2009/11/adxl345-accelerometer-breakout-board.html
