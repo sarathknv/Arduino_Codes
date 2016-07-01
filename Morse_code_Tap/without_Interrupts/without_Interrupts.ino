@@ -20,8 +20,8 @@
 #include<Wire.h>
 
 #define DEVICE (0x53)    //Device address
-boolean check1 = false, check2 = false;
-byte data, data2;    //stores byte read from INT_SOURCE (0x30)
+
+byte data;    //stores byte read from INT_SOURCE (0x30)
 
 void setup() {
   Wire.begin();
@@ -54,30 +54,13 @@ void loop() {
     if (!((data >> 5) & 1))
     {
       Serial.println("Single Tap");
-      check1 = true;
     }
     else
     {
       Serial.println("Double Tap");
-      check2 = true;
-    }
-    
-  }
-  delay(200);  
-  readFrom(DEVICE, 0x30, 1, &data2); 
-   if (((data2 >> 6) & 1) && check2 == true)
-  {
-    if (!((data2 >> 5) & 1))
-    {
-      Serial.println("Triple Tap");
-    }
-    else
-    {
-      Serial.println("Quadruple Tap");
     }
   }
-  delay(20);
-  check1 = false; check2 = false;
+  delay(30);
 }
 
 
